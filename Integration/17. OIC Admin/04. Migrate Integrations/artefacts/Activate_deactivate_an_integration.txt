@@ -1,0 +1,11 @@
+Deactivate a Connection:
+
+{
+    "status": "CONFIGURED"
+}
+
+Activate a Connection:
+
+{
+    "status": "ACTIVATED"
+}

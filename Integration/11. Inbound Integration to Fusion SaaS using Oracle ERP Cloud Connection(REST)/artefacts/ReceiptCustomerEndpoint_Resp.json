@@ -1,0 +1,14 @@
+{
+    "ReceiptNumber":"Sample",
+    "ReceiptId": 987,
+	"BusinessUnit": "Sweden Business Unit",
+    "ReceiptMethod": "Check (Directly/No Remit)",
+    "ReceiptDate": "2020-09-01",
+	"AccountingDate": "2020-09-01",
+    "Amount": 10.00,
+    "Currency": "SEK",
+	"RemittanceBankAccountNumber": "5001-1234567",
+    "RemittanceBankDepositDate": "2020-09-01",
+	"CustomerSite": "Sydney",
+    "CustomerAccountNumber": "25100"
+}

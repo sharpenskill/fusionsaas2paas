@@ -1,0 +1,21 @@
+{ 
+   "connectionProperties": [{ 
+      "propertyGroup": "CONNECTION_PROPS",     
+      "propertyName": "Host",   
+      "propertyType": "URL",  
+      "propertyValue": "https://ucf3-zpri-fa-ext.oracledemos.com" 
+   }],
+   "securityPolicy": "USERNAME_PASSWORD_TOKEN", 
+   "securityProperties":  [{ 
+      "propertyGroup": "CREDENTIALS",     
+      "propertyName": "username",  
+      "propertyType":"STRING",	  
+      "propertyValue": "fas01.student"
+   }, 
+   {
+      "propertyGroup": "CREDENTIALS",     
+      "propertyName": "password", 
+	  "propertyType": "PASSWORD",
+      "propertyValue": "nvnvn"
+   }]  
+}

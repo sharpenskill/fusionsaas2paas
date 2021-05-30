@@ -1,0 +1,31 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://abc.com/ws/myservices/hello/V01" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://abc.com/ws/myservices/hello/V01">
+    <wsdl:documentation>HelloWorld WSDL</wsdl:documentation>
+	<wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://abc.com/ws/myservices/hello/V01">
+		  <xs:element name="Name" type="ns:NameType"/>
+          <xs:complexType name="NameType">
+            <xs:sequence>
+              <xs:element type="xs:string" name="firstName"/>
+            </xs:sequence>
+          </xs:complexType>
+		  <xs:element name="Response" type="ns:ResponseType"/>
+          <xs:complexType name="ResponseType">
+            <xs:sequence>
+              <xs:element type="xs:string" name="HelloResponse"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="HelloReq">
+        <wsdl:part name="name" element="ns:Name"/>
+    </wsdl:message>
+	<wsdl:message name="HelloResp">
+        <wsdl:part name="greeting" element="ns:Response"/>
+    </wsdl:message>
+    <wsdl:portType name="HelloPortType">
+        <wsdl:operation name="sayHello">
+            <wsdl:input message="ns:HelloReq"/>
+			<wsdl:output message="ns:HelloResp"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

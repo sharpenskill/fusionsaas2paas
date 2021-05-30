@@ -1,0 +1,34 @@
+{ 
+   "connectionProperties": [{ 
+      "propertyGroup": "CONNECTION_PROPS",     
+      "propertyName": "Host",   
+      "propertyType": "URL",  
+      "propertyValue": "13.229.94.131" 
+   }, 
+   { 
+      "propertyGroup": "CONNECTION_PROPS",     
+      "propertyName": "Port",   
+      "propertyType": "STRING",  
+      "propertyValue": "22" 
+   },
+   { 
+      "propertyGroup": "CONNECTION_PROPS",     
+      "propertyName": "UseSftp",   
+      "propertyType": "CHOICE",  
+      "propertyValue": "true" 
+   }],
+   "securityPolicy": "FTP_PUBLIC_KEY_AUTHENTICATION", 
+   "securityProperties":  [{ 
+      "propertyGroup": "CREDENTIALS",     
+      "propertyName": "username",  
+      "propertyType":"STRING",	  
+      "propertyValue": "ubuntu"
+   }, 
+   {
+      "propertyGroup": "CREDENTIALS",     
+      "propertyName": "PrivateKeyFile", 
+	  "propertyType": "URL_OR_FILE",
+      "propertyValue": "myPrivateKey.ppk",
+	  "hasAttachment": true
+   }]  
+}

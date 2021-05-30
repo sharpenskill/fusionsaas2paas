@@ -1,0 +1,4 @@
+﻿DVM,FBDI_IMPORT_LOOKUP,
+IntegrationName,SourceFileInputPath,SourceFileArchivePath,FileNamePattern
+ImportJournal,/home/ubuntu/journal/input,/home/ubuntu/journal/archive,Journal*.csv
+ImportAPInvoice,/home/ubuntu/apinvoice/input,/home/ubuntu/apinvoice/archive,APInvoice*.csv

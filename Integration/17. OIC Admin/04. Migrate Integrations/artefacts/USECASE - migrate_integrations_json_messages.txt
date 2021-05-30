@@ -1,0 +1,64 @@
+--------------------
+Export Integration:
+--------------------
+
+https://oic99505698-ocuocictrng20-ld.integration.ocp.oraclecloud.com/ic/api/integration/v1/integrations/IMPORT_RECEIPTS%7C01.00.0000/archive
+GET
+
+--------------------
+Import Integration:
+--------------------
+
+https://oic99505698-ocuocictrng20-ld.integration.ocp.oraclecloud.com/ic/api/integration/v1/integrations/archive
+POST
+file
+
+--------------------
+Update Connection:
+--------------------
+
+https://oic99505698-ocuocictrng20-ld.integration.ocp.oraclecloud.com/ic/api/integration/v1/connections/RESTTRIGGERCONN
+POST
+X-HTTP-Method-Override - PATCH
+
+{
+   "securityPolicy": "BASIC_AUTH" 
+}
+
+https://oic99505698-ocuocictrng20-ld.integration.ocp.oraclecloud.com/ic/api/integration/v1/connections/ORACLEERPCLOUDCONN
+POST
+X-HTTP-Method-Override - PATCH
+
+{ 
+   "connectionProperties": [{ 
+      "propertyGroup": "CONNECTION_PROPS",     
+      "propertyName": "Host",   
+      "propertyType": "URL",  
+      "propertyValue": "https://ucf6-zvju-fa-ext.oracledemos.com" 
+   }],
+   "securityPolicy": "USERNAME_PASSWORD_TOKEN", 
+   "securityProperties":  [{ 
+      "propertyGroup": "CREDENTIALS",     
+      "propertyName": "username",  
+      "propertyType":"STRING",	  
+      "propertyValue": "fas02.student"
+   }, 
+   {
+      "propertyGroup": "CREDENTIALS",     
+      "propertyName": "password", 
+	  "propertyType": "PASSWORD",
+      "propertyValue": "Ehm84555"
+   }]  
+}
+
+--------------------
+Activate Integration:
+--------------------
+
+https://oic99505698-ocuocictrng20-ld.integration.ocp.oraclecloud.com/ic/api/integration/v1/integrations/IMPORT_RECEIPTS%7C01.00.0000
+POST
+X-HTTP-Method-Override - PATCH
+
+{
+    "status": "ACTIVATED"
+}

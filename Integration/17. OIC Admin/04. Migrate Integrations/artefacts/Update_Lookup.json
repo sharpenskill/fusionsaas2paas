@@ -1,0 +1,15 @@
+{
+   "columns":[
+      "FileNamePattern",
+      "PropertiesFileName"
+   ],
+   "rows":[
+      {
+         "rowData":[
+            "Journal123*.csv",
+            "GLJournal123.properties"
+         ]
+      }
+   ],
+   "name":"JOURNAL_IMPORT_LOOKUP"
+}

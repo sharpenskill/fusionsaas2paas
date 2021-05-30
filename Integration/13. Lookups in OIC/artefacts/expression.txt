@@ -1,0 +1,1 @@
+dvm:lookupValue("oramds:/apps/ICS/DVM/JOURNAL_IMPORT_LOOKUP.dvm", "IntegrationName", "ImportJournal", "FileNamePattern", "")

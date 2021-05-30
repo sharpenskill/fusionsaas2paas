@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v01="http://abc.com/ws/myservices/sample/V01">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v01:ReceiptReqParam>
+         <!--Optional:-->
+         <v01:ReceiptNumber>RCPT_4m_REST1001</v01:ReceiptNumber>
+      </v01:ReceiptReqParam>
+   </soapenv:Body>
+</soapenv:Envelope>

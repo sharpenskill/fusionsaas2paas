@@ -1,0 +1,6 @@
+{
+  "IntegrationName": "Sample",
+  "FlowInstanceID": 1290,
+  "FaultMessage": "Test",
+  "FaultType": "OICError"
+}

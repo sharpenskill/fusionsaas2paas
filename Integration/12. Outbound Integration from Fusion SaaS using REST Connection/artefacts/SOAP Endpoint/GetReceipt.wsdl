@@ -1,0 +1,36 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://abc.com/ws/myservices/sample/V01" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://abc.com/ws/myservices/sample/V01">
+    <wsdl:documentation>Get Receipt WSDL</wsdl:documentation>
+	<wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://abc.com/ws/myservices/sample/V01">
+            <xs:element name="ReceiptReqParam">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReceiptNumber" type="xs:string" minOccurs="0"/>
+						<xs:element name="DateFrom" type="xs:dateTime" minOccurs="0"/>
+						<xs:element name="DateTo" type="xs:dateTime" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+			<xs:element name="ReceiptRespParam">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReceiptNumber" type="xs:string" minOccurs="0"/>
+						<xs:element name="ReceiptDate" type="xs:dateTime" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="ReceiptRequestMsg">
+        <wsdl:part name="parameters" element="ns:ReceiptReqParam" />
+    </wsdl:message>
+	<wsdl:message name="ReceiptResponseMsg">
+        <wsdl:part name="parameters" element="ns:ReceiptRespParam" />
+    </wsdl:message>
+    <wsdl:portType name="ReceiptPortType">
+        <wsdl:operation name="GetReceipt">
+            <wsdl:input message="ns:ReceiptRequestMsg" wsaw:Action="urn:GetReceipt" />
+			<wsdl:output message="ns:ReceiptResponseMsg" wsaw:Action="urn:GetReceipt" />
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

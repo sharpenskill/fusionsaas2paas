@@ -1,0 +1,1 @@
+CREATE TABLE xx_supp_status(flowid varchar2(50),status varchar2(100));

@@ -1,0 +1,82 @@
+******************
+Integrations:
+******************
+Retrieve an Integration:
+========================
+REST Verb: GET
+https://sharpenskill.ocp.oraclecloud.com/ic/api/integration/v1/integrations/{id}
+
+id = JOURNALIMPORT%7C01.00.0000 where integration name and version is JOURNALIMPORT|01.00.0000
+
+Export an Integration:
+======================
+REST Verb: GET
+https://sharpenskill.ocp.oraclecloud.com/ic/api/integration/v1/integrations/{id}/archive
+
+Import an Integration (NEW):
+============================
+REST Verb: POST
+https://sharpenskill.ocp.oraclecloud.com/ic/api/integration/v1/integrations/archive
+
+Import an Integration (REPLACE):
+===============================
+REST Verb: PUT
+https://sharpenskill.ocp.oraclecloud.com/ic/api/integration/v1/integrations/archive
+
+Update (Activate/ Deactivate) an Integration:
+=============================================
+REST Verb: PUT
+Header Var: X-HTTP-Method-Override = PATCH
+https://sharpenskill.ocp.oraclecloud.com/ic/api/integration/v1/integrations/{id}
+
+******************
+Connections:
+******************
+Retrieve a Connection:
+=====================
+REST Verb: GET
+https://sharpenskill.ocp.oraclecloud.com/ic/api/integration/v1/connections/{id}
+
+Update a Connection:
+=====================
+REST Verb: POST
+Header Var: X-HTTP-Method-Override = PATCH
+https://sharpenskill.ocp.oraclecloud.com/ic/api/integration/v1/connections/{id}
+
+Test a Connection:
+======================
+REST Verb: POST
+https://sharpenskill.ocp.oraclecloud.com/ic/api/integration/v1/connections/{id}/test
+
+Refresh Metadata for a connection:
+==================================
+REST Verb: POST
+https://sharpenskill.ocp.oraclecloud.com/ic/api/integration/v1/connections/{id}/metadata
+
+******************
+Lookups:
+******************
+Retrieve a Lookup:
+=====================
+REST Verb: GET
+https://sharpenskill.ocp.oraclecloud.com/ic/api/integration/v1/lookups/{name}
+
+Export a Lookup:
+=====================
+REST Verb: GET
+https://sharpenskill.ocp.oraclecloud.com/ic/api/integration/v1/lookups/{name}/archive
+
+Import a Lookup (New):
+=====================
+REST Verb: POST
+https://sharpenskill.ocp.oraclecloud.com/ic/api/integration/v1/lookups/{name}/archive
+
+Import a Lookup (Replace):
+==========================
+REST Verb: PUT
+https://sharpenskill.ocp.oraclecloud.com/ic/api/integration/v1/lookups/{name}/archive
+
+Update a Lookup:
+=====================
+REST Verb: PUT
+https://sharpenskill.ocp.oraclecloud.com/ic/api/integration/v1/lookups/{name}

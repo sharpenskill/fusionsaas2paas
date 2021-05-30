@@ -1,0 +1,21 @@
+{
+    "items": [
+        {
+            "ReceiptNumber": "S99",
+            "ReceiptDate": "2020-10-22"
+        }
+    ],
+    "totalResults": 1,
+    "count": 1,
+    "hasMore": false,
+    "limit": 1,
+    "offset": 0,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://ucf3-zpri-fa-ext.oracledemos.com:443/fscmRestApi/resources/11.13.18.05/standardReceipts",
+            "name": "standardReceipts",
+            "kind": "collection"
+        }
+    ]
+}

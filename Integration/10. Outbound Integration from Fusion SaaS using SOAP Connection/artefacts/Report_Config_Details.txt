@@ -1,0 +1,9 @@
+Report Service URL:
+https://ucf3-zpri-fa-ext.oracledemos.com/xmlpserver/services/ExternalReportWSSService?wsdl
+
+Report Name & Path:
+/Custom/Financials/GL_DAS_Ledger_Report.xdo
+
+Parameters Name:
+p_das_name
+p_ledger_name
