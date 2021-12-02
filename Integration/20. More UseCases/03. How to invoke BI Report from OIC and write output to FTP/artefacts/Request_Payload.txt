@@ -1,0 +1,12 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v01="http://abc.com/ws/myservices/sample/V01">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v01:ReportParams>
+         <v01:ReportParam>
+            <v01:InvoiceSource>ISP</v01:InvoiceSource>
+            <!--Optional:-->
+            <v01:InvoiceNumber>162034inv</v01:InvoiceNumber>
+         </v01:ReportParam>
+      </v01:ReportParams>
+   </soapenv:Body>
+</soapenv:Envelope>

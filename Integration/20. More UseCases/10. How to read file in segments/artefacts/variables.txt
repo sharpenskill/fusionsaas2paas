@@ -1,0 +1,5 @@
+sourceDir="/home/ubuntu/inbound/employee"
+targetDir="/home/ubuntu/outbound/employee"
+sourceStageDir="/tmp/input"
+zipStageDir="/tmp/zip"
+filenamePattern="employee*.csv"

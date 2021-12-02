@@ -1,0 +1,28 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://abc.com/ws/myservices/sample/V01" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://abc.com/ws/myservices/sample/V01">
+    <wsdl:documentation>Sample WSDL</wsdl:documentation>
+	<wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://abc.com/ws/myservices/sample/V01">
+            <xs:element name="ReportParams">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReportParam" type="ns:ReportParamType" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+           <xs:complexType name="ReportParamType">
+                    <xs:sequence>
+					    <xs:element name="InvoiceSource" type="xs:string"/>
+                        <xs:element name="InvoiceNumber" type="xs:string" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="InvoiceReportReq">
+        <wsdl:part name="parameters" element="ns:ReportParams" />
+    </wsdl:message>
+    <wsdl:portType name="InvoiceReportReqPortType">
+        <wsdl:operation name="runAllReport">
+            <wsdl:input message="ns:InvoiceReportReq" wsaw:Action="urn:runAllReport" />
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

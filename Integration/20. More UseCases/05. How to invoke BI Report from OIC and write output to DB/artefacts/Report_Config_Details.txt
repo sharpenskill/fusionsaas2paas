@@ -1,0 +1,12 @@
+Report Service WSDL: https://ucf6-zvju-fa-ext.oracledemos.com/xmlpserver/services/ExternalReportWSSService?wsdl
+Report Name: /Custom/Financials/XXDEMO_RTF_TEMPLATE.xdo
+
+Parameter names:
+p_source
+p_inv_num
+
+Invoice Source: ISP
+Invoice Number: UK18PB8 or 162034inv
+
+"Invoice.xml"
+"/tmp/op"

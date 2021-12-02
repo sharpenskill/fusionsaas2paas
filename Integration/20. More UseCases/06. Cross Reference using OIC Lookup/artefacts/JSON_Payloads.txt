@@ -1,0 +1,6 @@
+Response JSON Payload:
+-------------------------
+{
+  "srcSystemCountryCode":"IND",
+  "destSystemCountryCode":"IN"
+}

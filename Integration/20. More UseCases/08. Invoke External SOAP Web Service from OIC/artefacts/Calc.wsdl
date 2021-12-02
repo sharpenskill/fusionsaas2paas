@@ -1,0 +1,32 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://abc.com/ws/myservices/calc/V01" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://abc.com/ws/myservices/calc/V01">
+    <wsdl:documentation>Calculator WSDL</wsdl:documentation>
+	<wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://abc.com/ws/myservices/calc/V01">
+		  <xs:element name="Input" type="ns:InputType"/>
+          <xs:complexType name="InputType">
+            <xs:sequence>
+              <xs:element type="xs:int" name="num1"/>
+			  <xs:element type="xs:int" name="num2"/>
+            </xs:sequence>
+          </xs:complexType>
+		  <xs:element name="Response" type="ns:ResponseType"/>
+          <xs:complexType name="ResponseType">
+            <xs:sequence>
+              <xs:element type="xs:int" name="addResponse"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="InputReq">
+        <wsdl:part name="inputs" element="ns:Input"/>
+    </wsdl:message>
+	<wsdl:message name="OutputResp">
+        <wsdl:part name="output" element="ns:Response"/>
+    </wsdl:message>
+    <wsdl:portType name="CalcPortType">
+        <wsdl:operation name="addition">
+            <wsdl:input message="ns:InputReq"/>
+			<wsdl:output message="ns:OutputResp"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

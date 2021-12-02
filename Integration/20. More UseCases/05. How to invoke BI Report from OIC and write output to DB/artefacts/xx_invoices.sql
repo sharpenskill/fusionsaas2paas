@@ -1,0 +1,1 @@
+CREATE TABLE xx_invoices(invoice_num VARCHAR2(150),source VARCHAR2(50), creation_date date);
